@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "tool": "win-path-doctor",
+  "collectedAtUtc": "2026-01-10T12:00:00Z",
+  "platform": "Synthetic Windows fixture",
+  "evidence": {
+    "command": "example",
+    "model": "Current directory, then process PATH and PATHEXT.",
+    "entries": [
+      {
+        "scope": "Process",
+        "index": 0,
+        "raw": "C:\\Tools",
+        "expanded": "C:\\Tools",
+        "exists": true,
+        "absolute": true
+      },
+      {
+        "scope": "Process",
+        "index": 1,
+        "raw": "c:\\tools\\",
+        "expanded": "c:\\tools\\",
+        "exists": true,
+        "absolute": true
+      },
+      {
+        "scope": "Machine",
+        "index": 0,
+        "raw": "C:\\Missing",
+        "expanded": "C:\\Missing",
+        "exists": false,
+        "absolute": true
+      }
+    ],
+    "candidates": [
+      {
+        "path": "C:\\Tools\\example.exe",
+        "rank": 1
+      },
+      {
+        "path": "C:\\Other\\example.exe",
+        "rank": 2
+      }
+    ]
+  },
+  "issues": []
+}
